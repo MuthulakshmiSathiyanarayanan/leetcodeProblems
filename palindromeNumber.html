@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PalindromeNumber</title>
+</head>
+
+<body>
+  <script>
+    var n = 12121;
+    reversed = 0;
+    original = n;
+
+    while (n != 0) {
+      remainder = n % 10;
+      reversed = reversed * 10 + remainder;
+      n=parseInt(n/10);
+    }
+
+    // palindrome if orignal and reversed are equal
+    if (original == reversed)
+      document.write(original + "is a palindrome.");
+    else
+      document.write(original + "is not a palindrome.");
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>longest common prefix</title>
+</head>
+
+<body>
+    <script>
+        array=["flower","flou","floweral"];
+        var str1 = array[0]
+        change(str1);
+        chars1 = chars;
+        var str2 = array[1];
+        change(str2);
+        chars2 = chars;
+        var str3 =array[2];
+        change(str3);
+        chars3 = chars;
+        //string to array function
+        function change(str) {
+            chars = [...str]
+            return (chars);
+        }
+//checking the prefix
+for(i=0;i<=chars1.length;i++)
+if(chars1[i]==chars2[i]&&chars1[i]==chars3[i])
+document.write(chars1[i]);
+else
+i=chars1.length+1;
+    </script>
+</body>
+
+</html>

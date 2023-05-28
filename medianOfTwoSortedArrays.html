@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Median of Two Sorted Arrays</title>
+</head>
+
+<body>
+
+    <script>
+        console.time('Execution Time');
+        var array1 = [1, 2, 3, 4, 5, 11];
+        var array2 = [3, 5];
+        array3 = array1.concat(array2);
+        if (array3.length % 2 == 0) {
+            tempMedian(array1);
+            tempsum = m;
+            tempdividor = n;
+            tempMedian(array2);
+
+            function tempMedian(array) {
+                if (array.length % 2 == 0) {
+                    m = (array[(array.length / 2)] + array[(array.length / 2) - 1]);
+                    n = 2;
+                    return (m, n);
+                }
+                else {
+                    m = array[parseInt(array.length / 2)];
+                    n = 1;
+                    return (m, n);
+                }
+
+            }
+            document.write("Median =" + (m + tempsum) / (n + tempdividor));
+        }
+        else {
+            array3.sort(function (a, b) { return -b + a });
+            document.write("Median =" + array3[parseInt(array3.length / 2)]);
+        }
+        console.timeEnd('Execution Time');
+
+    </script>
+
+</body>
+
+</html>
